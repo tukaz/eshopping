@@ -1,6 +1,6 @@
 import {
     SET_CURRENT_USER
- } from './constants'
+ } from './user-types'
 
 
 export const setCurrentUser = (currentUser) => (

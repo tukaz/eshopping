@@ -1,0 +1,36 @@
+.item-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    align-items: center;
+    width: 22%;
+
+    .item-image {
+        display: flex;
+        height: 95%;
+        width: 100%;
+        background-size: center;
+        background-position: center;
+        margin-bottom: 5px;
+    }
+
+    .item-footer {
+        display: flex;
+        height: 5%;
+        justify-content: space-between;
+        font-size: 18px;
+        width: 100%;
+        
+        .item-name {
+            width: 90%;
+            margin-bottom: 15px;
+        }
+
+        .item-price {
+            width: 10%;
+        }
+    }
+}
+
+
+

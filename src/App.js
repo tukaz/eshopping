@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setCurrentUser } from './redux/actions';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shoppage/shoppage.component';
 import Login from './pages/sign-in-sing-up/sign-in-and-sign-up.component';
@@ -9,49 +11,47 @@ import {Route,Switch} from 'react-router-dom';
 
 import './App.css';
 
-class App extends React.Component {
-
-  constructor(){
-    super();
-    this.state = {
-      currentUser : null
-    }
+// dispatch the DOM changes to call an action. note mapStateToProps returns object, mapDispatchToProps returns function
+// the function returns an object then uses connect to change the data from redecers.
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setCurrentUser: (currentUser) => dispatch(setCurrentUser(currentUser)),
   }
+}
+class App extends React.Component {
 
   unsubscribeFromAuth = null;
 
   componentDidMount(){
+    const {setCurrentUser} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      console.log(userAuth);
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(snapShot => {
-          this.setState(
+          setCurrentUser(
             {
-              currentUser: {
                 id: snapShot.id,
                 ...snapShot.data()
-              }
-            }
-          );
+            }          
+          )
         });
       } else {
-        this.setState({currentUser:userAuth});
+        setCurrentUser(null)
       }
 
     });
   }
 
   componentWillUnmount(){
-    console.log("componentWillUnmount");
     this.unsubscribeFromAuth(); 
   }
 
   render() {
-    const {currentUser} = this.state;
     return (
       <div className="App">
-        <Header currentUser={currentUser} />
+        <Header />
         <Switch>
             <Route path="/shop" component={ShopPage}/>
             <Route path="/signin" component={Login}/>
@@ -62,4 +62,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null,mapDispatchToProps)(App)

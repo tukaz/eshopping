@@ -13,7 +13,7 @@ const CollectionPreview = ({title,routeName,items}) => {
                    items
                     .slice(0,4)
                     .map( item => (
-                       <CollectionItem key={`i${item.id}`} {...item} />
+                       <CollectionItem key={item.id} item={item} />
                    )) 
                 }
             </div>

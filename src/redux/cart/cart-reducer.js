@@ -7,7 +7,7 @@ import {mergeCartItems} from './cart-utils';
 
   const initialStateCart = {
     isCartHidden: true,
-    items: []
+    items: []  
   }
 
   

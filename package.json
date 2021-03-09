@@ -1,7 +1,7 @@
 {
   "name": "crwn-cloathing",
   "version": "0.1.0",
-  "homepage": "https://tukaz.github.io/",
+  "homepage": "https://tukaz.github.io/eshopping",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

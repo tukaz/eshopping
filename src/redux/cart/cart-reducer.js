@@ -1,9 +1,14 @@
 import {
     TOGGLE_SHOPPING_CART,
-    ADD_ITEM
+    ADD_ITEM,
+    REMOVE_ITEM,
+    CLEAR_ITEM
    } from './cart-types';
 
-import {mergeCartItems} from './cart-utils';
+import {
+    addItemToCart,
+    removeCartItem
+  } from './cart-utils';
 
   const initialStateCart = {
     isCartHidden: true,
@@ -19,7 +24,19 @@ import {mergeCartItems} from './cart-utils';
       case ADD_ITEM:
         return { 
           ...state, 
-          items: mergeCartItems(state.items,action.payload)
+          items: addItemToCart(state.items,action.payload)
+        }
+      case CLEAR_ITEM:
+        return { 
+          ...state, 
+          items: state.items.filter(
+            cartItem => cartItem.id !== action.payload.id
+          )
+        }
+      case REMOVE_ITEM:
+        return { 
+          ...state, 
+          items: removeCartItem(state.items,action.payload)
         }
       default:
         return state

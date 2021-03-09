@@ -1,0 +1,29 @@
+.checkout-item {
+    display: flex;
+    width: 100%;
+    min-height: 150px;
+    align-items: center;
+
+    .item-block {
+        width: 23%;
+
+        img {
+            width: 50%;
+        }
+ 
+        .arrow {
+           cursor: pointer;
+        }
+
+        .quantity {
+            margin: 0 10px;
+        }
+
+        &:last-child {
+            width: 8%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}

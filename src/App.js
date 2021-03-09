@@ -4,12 +4,13 @@ import { setCurrentUser } from './redux/user/user-actions';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shoppage/shoppage.component';
 import SignInSignUpPage from './pages/sign-in-sing-up/sign-in-and-sign-up.component';
-
+import {selectCurrentUser} from './redux/user/user-selectors'
 import {auth, createUserProfileDocument} from './firebase/firebase.util';
 import Header from './components/header/header.component'
 import {Route,Switch,Redirect} from 'react-router-dom';
 
 import './App.css';
+import Checkout from './pages/checkout/checkout.component';
 
 // dispatch the DOM changes to call an action. note mapStateToProps returns object, mapDispatchToProps returns function
 // the function returns an object then uses connect to change the data from redecers.
@@ -19,9 +20,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const mapStateToProps = ({user: {currentUser}}) => {
+const mapStateToProps = state => {
   return {
-    currentUser
+    currentUser : selectCurrentUser(state)
   }
 }
 
@@ -62,6 +63,9 @@ class App extends React.Component {
         <Switch>
             <Route path="/shop" component={ShopPage}/>
             <Route exact path="/" component={HomePage}/>
+            <Route exact path="/checkout" render={()=> 
+                !currentUser ? (<Redirect to="/" />) : (<Checkout />)
+            }/>
             <Route exact path="/signin" render={()=> 
                 currentUser ? (<Redirect to="/" />) : (<SignInSignUpPage />)
             }/>

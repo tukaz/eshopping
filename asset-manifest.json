@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/eshopping/static/css/main.d49ab272.chunk.css",
-    "main.js": "/eshopping/static/js/main.e19bf56a.chunk.js",
-    "main.js.map": "/eshopping/static/js/main.e19bf56a.chunk.js.map",
-    "runtime-main.js": "/eshopping/static/js/runtime-main.5e4b1ab6.js",
-    "runtime-main.js.map": "/eshopping/static/js/runtime-main.5e4b1ab6.js.map",
-    "static/js/2.c1cc0b9e.chunk.js": "/eshopping/static/js/2.c1cc0b9e.chunk.js",
-    "static/js/2.c1cc0b9e.chunk.js.map": "/eshopping/static/js/2.c1cc0b9e.chunk.js.map",
-    "static/js/3.2801a7b5.chunk.js": "/eshopping/static/js/3.2801a7b5.chunk.js",
-    "static/js/3.2801a7b5.chunk.js.map": "/eshopping/static/js/3.2801a7b5.chunk.js.map",
+    "main.css": "/eshopping/static/css/main.6dda35e3.chunk.css",
+    "main.js": "/eshopping/static/js/main.89e3f668.chunk.js",
+    "main.js.map": "/eshopping/static/js/main.89e3f668.chunk.js.map",
+    "runtime-main.js": "/eshopping/static/js/runtime-main.78626a63.js",
+    "runtime-main.js.map": "/eshopping/static/js/runtime-main.78626a63.js.map",
+    "static/js/2.df0490ae.chunk.js": "/eshopping/static/js/2.df0490ae.chunk.js",
+    "static/js/2.df0490ae.chunk.js.map": "/eshopping/static/js/2.df0490ae.chunk.js.map",
+    "static/js/3.e0a4cac5.chunk.js": "/eshopping/static/js/3.e0a4cac5.chunk.js",
+    "static/js/3.e0a4cac5.chunk.js.map": "/eshopping/static/js/3.e0a4cac5.chunk.js.map",
     "index.html": "/eshopping/index.html",
-    "static/css/main.d49ab272.chunk.css.map": "/eshopping/static/css/main.d49ab272.chunk.css.map",
-    "static/js/2.c1cc0b9e.chunk.js.LICENSE.txt": "/eshopping/static/js/2.c1cc0b9e.chunk.js.LICENSE.txt",
+    "static/css/main.6dda35e3.chunk.css.map": "/eshopping/static/css/main.6dda35e3.chunk.css.map",
+    "static/js/2.df0490ae.chunk.js.LICENSE.txt": "/eshopping/static/js/2.df0490ae.chunk.js.LICENSE.txt",
     "static/media/crown.3a4e2b15.svg": "/eshopping/static/media/crown.3a4e2b15.svg",
     "static/media/shopping-bag.a688874f.svg": "/eshopping/static/media/shopping-bag.a688874f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5e4b1ab6.js",
-    "static/js/2.c1cc0b9e.chunk.js",
-    "static/css/main.d49ab272.chunk.css",
-    "static/js/main.e19bf56a.chunk.js"
+    "static/js/runtime-main.78626a63.js",
+    "static/js/2.df0490ae.chunk.js",
+    "static/css/main.6dda35e3.chunk.css",
+    "static/js/main.89e3f668.chunk.js"
   ]
 }

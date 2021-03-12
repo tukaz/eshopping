@@ -1,5 +1,4 @@
 import React from 'react'
-import {CSSTransition} from 'react-transition-group'; // ES6
 
 import {connect} from 'react-redux';
 import {selectCartItems,selectCartItemsPrice} from '../../redux/cart/cart-selectors';
@@ -31,16 +30,7 @@ const Checkout = ({items,total}) => (
                 <CheckoutItem key={item.id} item={item}/>
             ))
         }
-        <CSSTransition
-            transitionName="example"
-            transitionAppear={true}
-            transitionAppearTimeout={500}
-            transitionEnter={false}
-            transitionLeave={false}
-        >
-            <div className="total"><span>Total: </span>{total}</div>
-        </CSSTransition>
-        
+        <div className="total"><span>Total: </span>{total}</div>        
     </div>
 )
 

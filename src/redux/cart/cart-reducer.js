@@ -20,7 +20,7 @@ import {
     
     switch (action.type) {
       case TOGGLE_SHOPPING_CART:
-        return { ...state, isCartHidden: !state.isCartHidden};
+        return { ...state, isCartHidden: action.payload === false ? action.payload : !state.isCartHidden};
       case ADD_ITEM:
         return { 
           ...state, 

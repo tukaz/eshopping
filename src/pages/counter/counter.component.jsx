@@ -11,7 +11,6 @@ const Test = () =>{
         fetch(API).then(
             r => r.json().then( 
                 data => {
-                    console.log(data.results);
                     setData(JSON.stringify(data.results[0]))
                 }
             )

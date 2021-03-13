@@ -15,7 +15,6 @@ const mapStateToProps = state => {
 }
 
 const Cart = ({items,location,history,dispatch}) => {
-    console.log(location,"match");
     return (
         <div className="cart-dropdown">
             <div className="cart-items">

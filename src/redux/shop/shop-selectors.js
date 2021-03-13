@@ -22,5 +22,9 @@ export const selectCollectionFromUrlParam = collectionId => (
     )
 )
        
+export const selectCollectionIsLoading = createSelector(
+    [selectShop],
+    shop => shop.isLoading
+)
     
 

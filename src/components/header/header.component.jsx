@@ -6,7 +6,6 @@ import {ReactComponent as Logo} from '../../assets/crown.svg'
 
 import {selectCurrentUser} from '../../redux/user/user-selectors'
 import {selectCartHidden} from '../../redux/cart/cart-selectors'
-
 import {
     HeaderContainer,
     OptionContainerLink,
